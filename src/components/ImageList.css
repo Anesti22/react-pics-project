@@ -1,10 +1,22 @@
 .image-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 0fr));
-    grid-gap: 0px 0;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 0fr));
+    grid-gap: 0px 0px;
     grid-auto-rows: 10px;
 }
 
 .image-list img{
-    width: 250px;
+    width: 220px;
+}
+
+@media screen and (max-width: 600px) {
+    .image-list img{
+        width: 100%;
+    }
+
+    .image-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
